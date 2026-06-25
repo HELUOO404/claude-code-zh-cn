@@ -72,6 +72,19 @@ pnpm run build
 
 ## 已知问题与限制
 
+### IPC 协议保护
+
+翻译引擎内置 IPC 协议保护机制。`applyRules()` 在执行非正则规则替换前，会检测规则原文是否出现在
+`sendRequest({type:...})` 或 `postMessage({type/command:...})` 的 IPC 发送上下文中。
+
+如果检测到 IPC 上下文，整个规则将被跳过并输出警告日志（前缀 `[IPC 保护]`）。
+
+**添加翻译规则时注意**：
+- 不要翻译 IPC 协议标识符（如 `install_plugin`、`add_marketplace` 等 snake_case 标识符）
+- 如果规则原文可能出现在 IPC 发送上下文中，该规则会被自动跳过
+- 此保护仅对非正则规则生效（正则规则需要人工审核）
+- 运行测试：`node test/ipc-protection.test.js`
+
 1. **侵入式修改**
    - 直接修改已安装的 Claude Code 扩展文件
    - Claude Code 更新时会覆盖汉化，需重新运行扩展

@@ -529,30 +529,6 @@
       "chinese": "\"已安装\""
     },
     {
-      "original": "\"install_plugin\"",
-      "chinese": "\"安装插件\""
-    },
-    {
-      "original": "\"uninstall_plugin\"",
-      "chinese": "\"卸载插件\""
-    },
-    {
-      "original": "\"set_plugin_enabled\"",
-      "chinese": "\"设置插件启用状态\""
-    },
-    {
-      "original": "\"add_marketplace\"",
-      "chinese": "\"添加市场\""
-    },
-    {
-      "original": "\"remove_marketplace\"",
-      "chinese": "\"移除市场\""
-    },
-    {
-      "original": "\"refresh_marketplace\"",
-      "chinese": "\"刷新市场\""
-    },
-    {
       "original": "\"Search plugins…\"",
       "chinese": "\"搜索插件…\""
     },

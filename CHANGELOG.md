@@ -2,6 +2,17 @@
 
 本项目的所有重要变更都将记录在此文件中。
 
+## [1.4.1] - 2026-06-25
+
+### 修复
+
+- 移除 6 条会破坏 IPC 协议的翻译规则（install_plugin、uninstall_plugin、set_plugin_enabled、add_marketplace、remove_marketplace、refresh_marketplace）
+
+### 新增
+
+- 翻译引擎新增 IPC 协议保护：自动检测并跳过出现在 sendRequest/postMessage 上下文中的翻译规则，防止协议字符串被误翻译
+- 新增 IPC 协议保护单元测试（`node test/ipc-protection.test.js`）
+
 ## [1.4.0] - 2026-06-25
 
 ### 新增
