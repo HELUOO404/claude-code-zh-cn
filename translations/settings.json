@@ -1,6 +1,22 @@
 {
   "version": "1.0.0",
   "description": "Claude Code 设置面板汉化规则（用于 package.json）",
+  "titles": {
+    "claudeCode.environmentVariables": "环境变量",
+    "claudeCode.useTerminal": "使用终端",
+    "claudeCode.allowDangerouslySkipPermissions": "允许危险跳过权限",
+    "claudeCode.claudeProcessWrapper": "Claude 进程包装器",
+    "claudeCode.respectGitIgnore": "遵循 Git 忽略规则",
+    "claudeCode.initialPermissionMode": "初始权限模式",
+    "claudeCode.disableLoginPrompt": "禁用登录提示",
+    "claudeCode.autosave": "自动保存",
+    "claudeCode.useCtrlEnterToSend": "使用 Ctrl+Enter 发送",
+    "claudeCode.preferredLocation": "首选位置",
+    "claudeCode.enableNewConversationShortcut": "新建对话快捷键",
+    "claudeCode.enableReopenClosedSessionShortcut": "重新打开已关闭会话快捷键",
+    "claudeCode.hideOnboarding": "隐藏新手引导",
+    "claudeCode.usePythonEnvironment": "使用 Python 环境"
+  },
   "descriptions": {
     "claudeCode.useTerminal": "在终端而非原生 UI 中启动 Claude。",
     "claudeCode.allowDangerouslySkipPermissions": "允许绕过权限模式。仅建议在无网络访问的沙盒环境中使用。",
