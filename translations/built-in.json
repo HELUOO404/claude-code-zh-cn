@@ -3,10 +3,6 @@
   "description": "Claude Code 内置汉化规则",
   "translations": [
     {
-      "original": "to focus or unfocus Claude",
-      "chinese": "聚焦或取消聚焦 Claude 窗口"
-    },
-    {
       "original": "\"Ask before edits\"",
       "chinese": "\"修改前询问\""
     },
@@ -633,10 +629,6 @@
       "chinese": "\"关闭对话框\""
     },
     {
-      "original": "\"Manage Plugins\"",
-      "chinese": "\"管理插件\""
-    },
-    {
       "original": "\"Restart Claude to apply plugin changes\"",
       "chinese": "\"重启 Claude 以应用插件更改\""
     },
@@ -719,10 +711,6 @@
     {
       "original": "\"Failed to load plugins: \"",
       "chinese": "\"加载插件失败：\""
-    },
-    {
-      "original": "\"No plugins available. Add a marketplace to discover plugins.\"",
-      "chinese": "\"没有可用插件。请添加市场源以发现插件。\""
     },
     {
       "original": "\"Select a model\"",
@@ -882,10 +870,6 @@
       "chinese": "\"保存到 ~/.claude/settings.json\""
     },
     {
-      "original": "\"Saves to ~/.claude/settings.json\"",
-      "chinese": "\"保存到 ~/.claude/settings.json\""
-    },
-    {
       "original": "\"Saves to .claude/settings.json (shared with team)\"",
       "chinese": "\"保存到 .claude/settings.json（共享团队）\""
     },
@@ -950,10 +934,6 @@
       "chinese": "\"是的，不再询问\""
     },
     {
-      "original": "\"Yes, and auto-accept\"",
-      "chinese": "\"是的，自动接受\""
-    },
-    {
       "original": "\"No sessions found\"",
       "chinese": "\"未找到会话记录\""
     },
@@ -963,7 +943,7 @@
     },
     {
       "original": "\"Effort\"",
-      "chinese": "\"工作量\""
+      "chinese": "\"思考强度\""
     },
     {
       "original": "\"Toggle fast mode (Opus 4.6 only)\"",
@@ -1023,11 +1003,11 @@
     },
     {
       "original": "\"Set how hard the model tries\"",
-      "chinese": "\"设置模型的思考投入程度\""
+      "chinese": "\"设置模型的思考强度\""
     },
     {
       "original": "\"Click a position to set effort level\"",
-      "chinese": "\"点击位置以设置投入等级\""
+      "chinese": "\"点击位置以设置思考强度\""
     },
     {
       "original": "\"Change the AI model\"",
@@ -1142,10 +1122,6 @@
       "chinese": "\"正在梳理逻辑\""
     },
     {
-      "original": "\"Concocting\"",
-      "chinese": "\"正在构思方案\""
-    },
-    {
       "original": "\"Considering\"",
       "chinese": "\"正在权衡\""
     },
@@ -1212,10 +1188,6 @@
     {
       "original": "\"Flibbertigibbeting\"",
       "chinese": "\"正在飞速运转\""
-    },
-    {
-      "original": "\"Forging\"",
-      "chinese": "\"正在锻造\""
     },
     {
       "original": "\"Forming\"",
@@ -1428,6 +1400,118 @@
     {
       "original": "\"Review the plan above and decide whether to proceed\"",
       "chinese": "\"请审核以上计划并决定是否继续\""
+    },
+    {
+      "original": "\"Auto mode\"",
+      "chinese": "\"自动模式\""
+    },
+    {
+      "original": "\"Auto mode is enabled\"",
+      "chinese": "\"已启用自动模式\""
+    },
+    {
+      "original": "\"Auto mode lets Claude handle permission prompts automatically. Claude checks each tool call for risky actions and prompt injection before executing, runs the ones it assesses as lower-risk, and blocks the rest.\"",
+      "chinese": "\"自动模式让 Claude 自动处理权限提示。Claude 会在执行前检查每个工具调用是否存在风险操作和提示注入，执行低风险的调用，并阻止其余调用。\""
+    },
+    {
+      "original": "\"Claude will automatically choose the best permission mode for each task\"",
+      "chinese": "\"Claude 将为每个任务自动选择最佳权限模式\""
+    },
+    {
+      "original": "\"Fast mode enabled\"",
+      "chinese": "\"已启用快速模式\""
+    },
+    {
+      "original": "\"Fast mode cooling down\"",
+      "chinese": "\"快速模式冷却中\""
+    },
+    {
+      "original": "\"Ask before editing\"",
+      "chinese": "\"编辑前询问\""
+    },
+    {
+      "original": "\"Plan Mode\"",
+      "chinese": "\"计划模式\""
+    },
+    {
+      "original": "\"Click to cycle effort level\"",
+      "chinese": "\"点击切换思考强度\""
+    },
+    {
+      "original": "\"Click or drag to set effort level\"",
+      "chinese": "\"点击或拖动以设置思考强度\""
+    },
+    {
+      "original": "\"Claude will not ask for approval before running potentially dangerous commands\"",
+      "chinese": "\"Claude 在运行潜在危险命令前不会征求您的同意\""
+    },
+    {
+      "original": "\"By default, Claude asks you before editing a file. Press Shift-Tab or click the mode picker to switch to Auto-Accept mode. Then, send a prompt and watch Claude edit without stopping!\"",
+      "chinese": "\"默认情况下，Claude 会在编辑文件前询问您。按 Shift+Tab 或点击模式选择器切换到自动接受模式，然后发送提示，即可观看 Claude 不间断地编辑！\""
+    },
+    {
+      "original": "\"Press Shift-Tab twice, or click the mode picker twice, to cycle into Plan Mode. This forces Claude to write a detailed plan before it can edit any code.\"",
+      "chinese": "\"按两次 Shift+Tab 或点击两次模式选择器，切换到计划模式。此模式会强制 Claude 在编辑代码前先撰写详细计划。\""
+    },
+    {
+      "original": "\"Allow fetching this url?\"",
+      "chinese": "\"是否允许获取此 URL？\""
+    },
+    {
+      "original": "\"Allow glob search in\"",
+      "chinese": "\"允许在以下位置进行 glob 搜索\""
+    },
+    {
+      "original": "\"Allow grep in\"",
+      "chinese": "\"允许在以下位置进行 grep 搜索\""
+    },
+    {
+      "original": "\"Allow network connection to this host?\"",
+      "chinese": "\"是否允许连接到此主机？\""
+    },
+    {
+      "original": "\"Allow reading from\"",
+      "chinese": "\"允许读取\""
+    },
+    {
+      "original": "\"Allow searching for this query?\"",
+      "chinese": "\"是否允许此搜索查询？\""
+    },
+    {
+      "original": "\"Allow searching in\"",
+      "chinese": "\"允许在以下位置搜索\""
+    },
+    {
+      "original": "\"Allow this \"",
+      "chinese": "\"允许此 \""
+    },
+    {
+      "original": "\"Allow this glob command\"",
+      "chinese": "\"允许此 glob 命令\""
+    },
+    {
+      "original": "\"Allow this grep command\"",
+      "chinese": "\"允许此 grep 命令\""
+    },
+    {
+      "original": "\"Allow this search\"",
+      "chinese": "\"允许此搜索\""
+    },
+    {
+      "original": "\"Allow write to\"",
+      "chinese": "\"允许写入\""
+    },
+    {
+      "original": "\"Reject\"",
+      "chinese": "\"拒绝\""
+    },
+    {
+      "original": "\"Reject Inline Edit\"",
+      "chinese": "\"拒绝内联编辑\""
+    },
+    {
+      "original": "\"Welcome to Claude Code\"",
+      "chinese": "\"欢迎使用 Claude Code\""
     }
   ]
 }
