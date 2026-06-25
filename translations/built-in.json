@@ -1524,6 +1524,414 @@
     {
       "original": "\"When safety measures flag a message, automatically switch to a different model to keep chatting. When off, your session will pause instead.\"",
       "chinese": "\"当安全措施标记某条消息时，自动切换到其他模型以继续对话。关闭此选项后，会话将暂停。\""
+    },
+    {
+      "original": "\"Skills\"",
+      "chinese": "\"技能\""
+    },
+    {
+      "original": "\"Subagents\"",
+      "chinese": "\"子代理\""
+    },
+    {
+      "original": "\"Diagnostics\"",
+      "chinese": "\"诊断\""
+    },
+    {
+      "original": "\"Toggle fast mode\"",
+      "chinese": "\"切换快速模式\""
+    },
+    {
+      "original": "\"API Key\"",
+      "chinese": "\"API 密钥\""
+    },
+    {
+      "original": "\"Day\"",
+      "chinese": "\"天\""
+    },
+    {
+      "original": "\"Week\"",
+      "chinese": "\"周\""
+    },
+    {
+      "original": "\"Usage window\"",
+      "chinese": "\"使用时段\""
+    },
+    {
+      "original": "\"Manage usage on claude.ai\"",
+      "chinese": "\"在 claude.ai 上管理用量\""
+    },
+    {
+      "original": "\"Context usage\"",
+      "chinese": "\"上下文用量\""
+    },
+    {
+      "original": "\"Memory files\"",
+      "chinese": "\"记忆文件\""
+    },
+    {
+      "original": "\"Compacting\"",
+      "chinese": "\"正在压缩\""
+    },
+    {
+      "original": "\"Session paused\"",
+      "chinese": "\"会话已暂停\""
+    },
+    {
+      "original": "\"After making changes, exit Claude in Terminal, and reload the IDE extension to use them here.\"",
+      "chinese": "\"修改后，请退出终端中的 Claude 并重新加载 IDE 扩展以使其生效。\""
+    },
+    {
+      "original": "\"No MCP servers configured.\"",
+      "chinese": "\"未配置 MCP 服务器。\""
+    },
+    {
+      "original": "\"Learn more about MCP\"",
+      "chinese": "\"了解更多关于 MCP 的信息\""
+    },
+    {
+      "original": "\"Not authenticated\"",
+      "chinese": "\"未认证\""
+    },
+    {
+      "original": "\"Not Specified\"",
+      "chinese": "\"未指定\""
+    },
+    {
+      "original": "\"Authenticate\"",
+      "chinese": "\"认证\""
+    },
+    {
+      "original": "\"Authenticated successfully\"",
+      "chinese": "\"认证成功\""
+    },
+    {
+      "original": "\"Authenticating…\"",
+      "chinese": "\"正在认证…\""
+    },
+    {
+      "original": "\"Authentication failed\"",
+      "chinese": "\"认证失败\""
+    },
+    {
+      "original": "\"Clear authentication\"",
+      "chinese": "\"清除认证\""
+    },
+    {
+      "original": "\"Failed to clear authentication\"",
+      "chinese": "\"清除认证失败\""
+    },
+    {
+      "original": "\"Check connection\"",
+      "chinese": "\"检查连接\""
+    },
+    {
+      "original": "\"Reconnect\"",
+      "chinese": "\"重新连接\""
+    },
+    {
+      "original": "\"Disable\"",
+      "chinese": "\"禁用\""
+    },
+    {
+      "original": "\"Disabled\"",
+      "chinese": "\"已禁用\""
+    },
+    {
+      "original": "\"Enable\"",
+      "chinese": "\"启用\""
+    },
+    {
+      "original": "\"Needs Auth\"",
+      "chinese": "\"需要认证\""
+    },
+    {
+      "original": "\"Connected\"",
+      "chinese": "\"已连接\""
+    },
+    {
+      "original": "\"Failed\"",
+      "chinese": "\"失败\""
+    },
+    {
+      "original": "\"Not connected\"",
+      "chinese": "\"未连接\""
+    },
+    {
+      "original": "\"Failed to disable server\"",
+      "chinese": "\"禁用服务器失败\""
+    },
+    {
+      "original": "\"Failed to enable server\"",
+      "chinese": "\"启用服务器失败\""
+    },
+    {
+      "original": "\"Failed to load MCP servers\"",
+      "chinese": "\"加载 MCP 服务器失败\""
+    },
+    {
+      "original": "\"Failed to reconnect\"",
+      "chinese": "\"重新连接失败\""
+    },
+    {
+      "original": "\"Failed to submit callback URL\"",
+      "chinese": "\"提交回调 URL 失败\""
+    },
+    {
+      "original": "\"Create Worktree Session\"",
+      "chinese": "\"创建工作树会话\""
+    },
+    {
+      "original": "\"Worktree Name\"",
+      "chinese": "\"工作树名称\""
+    },
+    {
+      "original": "\"New worktree name\"",
+      "chinese": "\"新工作树名称\""
+    },
+    {
+      "original": "\"Name is required\"",
+      "chinese": "\"名称为必填项\""
+    },
+    {
+      "original": "\"A new Git worktree will be created in a sibling directory\"",
+      "chinese": "\"将在同级目录中创建新的 Git 工作树\""
+    },
+    {
+      "original": "\"Open worktree\"",
+      "chinese": "\"打开工作树\""
+    },
+    {
+      "original": "\"Enter worktree name\"",
+      "chinese": "\"输入工作树名称\""
+    },
+    {
+      "original": "\"This session is in worktree\"",
+      "chinese": "\"此会话位于工作树中\""
+    },
+    {
+      "original": "\"Failed to create worktree\"",
+      "chinese": "\"创建工作树失败\""
+    },
+    {
+      "original": "\"Create\"",
+      "chinese": "\"创建\""
+    },
+    {
+      "original": "\"Creating worktree…\"",
+      "chinese": "\"正在创建工作树…\""
+    },
+    {
+      "original": "\"Switch branch & continue\"",
+      "chinese": "\"切换分支并继续\""
+    },
+    {
+      "original": "\"Continue without switching branch\"",
+      "chinese": "\"不切换分支继续\""
+    },
+    {
+      "original": "\"Branch switch failed\"",
+      "chinese": "\"切换分支失败\""
+    },
+    {
+      "original": "\"Can’t switch branches\"",
+      "chinese": "\"无法切换分支\""
+    },
+    {
+      "original": "\"This session was started on a different branch. Switch to continue with the original context.\"",
+      "chinese": "\"此会话在不同的分支上启动。切换分支以继续使用原始上下文。\""
+    },
+    {
+      "original": "\"Checking working directory\"",
+      "chinese": "\"正在检查工作目录\""
+    },
+    {
+      "original": "\"Voice dictation\"",
+      "chinese": "\"语音听写\""
+    },
+    {
+      "original": "\"Tap or hold to record\"",
+      "chinese": "\"点击或长按以录音\""
+    },
+    {
+      "original": "\"Stop recording\"",
+      "chinese": "\"停止录音\""
+    },
+    {
+      "original": "\"Microphone access denied\"",
+      "chinese": "\"麦克风访问被拒绝\""
+    },
+    {
+      "original": "\"Browser connected\"",
+      "chinese": "\"浏览器已连接\""
+    },
+    {
+      "original": "\"Connect\"",
+      "chinese": "\"连接\""
+    },
+    {
+      "original": "\"Disconnect browser\"",
+      "chinese": "\"断开浏览器\""
+    },
+    {
+      "original": "\"Browse the web\"",
+      "chinese": "\"浏览网页\""
+    },
+    {
+      "original": "\"Add browser tabs to the conversation\"",
+      "chinese": "\"将浏览器标签页添加到对话\""
+    },
+    {
+      "original": "\"Remote Control connected\"",
+      "chinese": "\"远程控制已连接\""
+    },
+    {
+      "original": "\"Disconnect Remote Control\"",
+      "chinese": "\"断开远程控制\""
+    },
+    {
+      "original": "\"Jupyter notebook detected\"",
+      "chinese": "\"检测到 Jupyter Notebook\""
+    },
+    {
+      "original": "\"Notebook connected\"",
+      "chinese": "\"Notebook 已连接\""
+    },
+    {
+      "original": "\"Disconnect notebook\"",
+      "chinese": "\"断开 Notebook\""
+    },
+    {
+      "original": "\"How is Claude doing this session?\"",
+      "chinese": "\"Claude 在本次会话中表现如何？\""
+    },
+    {
+      "original": "\"How can I do better? We would love to hear your feedback!\"",
+      "chinese": "\"如何改进？我们期待您的反馈！\""
+    },
+    {
+      "original": "\"Can I ask for a favor?\"",
+      "chinese": "\"能帮个忙吗？\""
+    },
+    {
+      "original": "\"Sure!\"",
+      "chinese": "\"当然！\""
+    },
+    {
+      "original": "\"What? No!\"",
+      "chinese": "\"什么？不！\""
+    },
+    {
+      "original": "\"Thank you very much for the feedback!\"",
+      "chinese": "\"非常感谢您的反馈！\""
+    },
+    {
+      "original": "\"Thanks for the feedback!\"",
+      "chinese": "\"感谢您的反馈！\""
+    },
+    {
+      "original": "\"Give feedback\"",
+      "chinese": "\"提供反馈\""
+    },
+    {
+      "original": "\"Write review\"",
+      "chinese": "\"撰写评价\""
+    },
+    {
+      "original": "\"Rate Claude Code\"",
+      "chinese": "\"为 Claude Code 评分\""
+    },
+    {
+      "original": "\"Send feedback and keep planning\"",
+      "chinese": "\"发送反馈并继续规划\""
+    },
+    {
+      "original": "\"Dismiss survey\"",
+      "chinese": "\"关闭调查\""
+    },
+    {
+      "original": "\"Usage tracking is only available for Claude AI subscribers.\"",
+      "chinese": "\"用量追踪仅对 Claude AI 订阅用户可用。\""
+    },
+    {
+      "original": "\"Included in your plan limits\"",
+      "chinese": "\"包含在您的计划限额内\""
+    },
+    {
+      "original": "\"Failed to load usage data\"",
+      "chinese": "\"加载使用数据失败\""
+    },
+    {
+      "original": "\"What’s contributing to your limits usage?\"",
+      "chinese": "\"什么在消耗您的限额？\""
+    },
+    {
+      "original": "\"% of usage\"",
+      "chinese": "\"使用百分比\""
+    },
+    {
+      "original": "\"Skills, subagents, plugins, and MCP servers\"",
+      "chinese": "\"技能、子代理、插件和 MCP 服务器\""
+    },
+    {
+      "original": "\"No attribution data yet - accumulates as you use Claude\"",
+      "chinese": "\"暂无归属数据——使用 Claude 后会逐步积累\""
+    },
+    {
+      "original": "\"Approximate, based on local sessions on this machine - does not include other devices or claude.ai\"",
+      "chinese": "\"基于本机本地会话的近似值，不包含其他设备或 claude.ai\""
+    },
+    {
+      "original": "\"for a limited time\"",
+      "chinese": "\"限时\""
+    },
+    {
+      "original": "\"Click to compact now.\"",
+      "chinese": "\"点击立即压缩。\""
+    },
+    {
+      "original": "\"No sessions yet\"",
+      "chinese": "\"暂无会话\""
+    },
+    {
+      "original": "\"No web sessions yet\"",
+      "chinese": "\"暂无 Web 会话\""
+    },
+    {
+      "original": "\"Loading sessions…\"",
+      "chinese": "\"正在加载会话…\""
+    },
+    {
+      "original": "\"Delete session\"",
+      "chinese": "\"删除会话\""
+    },
+    {
+      "original": "\"Rename session\"",
+      "chinese": "\"重命名会话\""
+    },
+    {
+      "original": "\"Restart the onboarding flow\"",
+      "chinese": "\"重新开始新手引导\""
+    },
+    {
+      "original": "\"Learn your next skill\"",
+      "chinese": "\"学习下一个技能\""
+    },
+    {
+      "original": "\"View output logs\"",
+      "chinese": "\"查看输出日志\""
+    },
+    {
+      "original": "\"Install and manage plugins\"",
+      "chinese": "\"安装和管理插件\""
+    },
+    {
+      "original": "\"Claude’s Plan\"",
+      "chinese": "\"Claude 的计划\""
+    },
+    {
+      "original": "\"Claude’s Plan \"",
+      "chinese": "\"Claude 的计划 \""
     }
   ]
 }
