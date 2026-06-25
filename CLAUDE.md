@@ -97,12 +97,12 @@ pnpm run build
 2. **不要用 `description` → `markdownDescription` 转换** — 会导致设置项渲染异常（黑块、布局错乱）
 3. **不要在描述中用 `\n` 换行** — VS Code 设置面板不渲染 JSON 中的 `\n` 为换行
 4. **不要设置 `title` 字段** — VS Code 对单个设置不支持 `title`，设置名从 key 自动生成（如 `initialPermissionMode` → "Initial Permission Mode"），无法覆盖
+5. **不要使用 `enumItemLabels`** — VS Code 1.126.0 有已知 bug（[#243901](https://github.com/microsoft/vscode/issues/243901)），会导致下拉菜单空白、黑块。等官方修复后再使用
 
 **✅ 正确操作**：
 - **只替换现有字段的值**，不新增、不删除字段
 - 标题翻译格式：`中文标题：描述文本`（冒号连接，放在 description 里）
-- 枚举下拉选项：用 `enumItemLabels`（VS Code 1.83+）翻译显示标签
-- 枚举项描述：用 `enumDescriptions` 翻译
+- 枚举下拉选项：用 `enumDescriptions`（稳定无 bug），在每个英文选项下方显示中文描述
 - `usePythonEnvironment` 用的是 `markdownDescription`（含链接），翻译时保持 markdown 格式
 
 **translator.js 翻译逻辑**：
