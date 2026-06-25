@@ -2,6 +2,27 @@
 
 本项目的所有重要变更都将记录在此文件中。
 
+## [1.4.0] - 2026-06-25
+
+### 新增
+
+- 新增设置面板翻译：package.json 中的设置描述和枚举值翻译
+- 新增 `translations/settings.json` 存储设置面板翻译规则
+- 翻译引擎增加 `translatePackageJson()` 方法，支持 JSON 结构化翻译
+- 定位器增加 `findPackageJson()` 方法
+- 还原功能支持同时还原 package.json 备份
+
+### 翻译内容
+
+- useTerminal: 在终端而非原生 UI 中启动 Claude
+- allowDangerouslySkipPermissions: 允许绕过权限模式
+- respectGitIgnore: 执行文件搜索时遵循 .gitignore 文件
+- initialPermissionMode: 新对话的初始权限模式
+- useCtrlEnterToSend: 使用 Ctrl/Cmd+Enter 发送提示
+- preferredLocation: Claude 默认打开位置 + 枚举值翻译
+- hideOnboarding: 隐藏新手引导清单
+- usePythonEnvironment: 自动激活 Python 环境
+
 ## [1.3.0] - 2026-06-25
 
 ### 新增

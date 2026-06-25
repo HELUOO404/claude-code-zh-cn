@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "description": "Claude Code 设置面板汉化规则（用于 package.json）",
+  "descriptions": {
+    "claudeCode.useTerminal": "在终端而非原生 UI 中启动 Claude。",
+    "claudeCode.allowDangerouslySkipPermissions": "允许绕过权限模式。仅建议在无网络访问的沙盒环境中使用。",
+    "claudeCode.respectGitIgnore": "执行文件搜索时遵循 .gitignore 文件。提示：禁用此选项后，仍可通过 .ignore 中的其他排除模式进行过滤。",
+    "claudeCode.initialPermissionMode": "新对话的初始权限模式。",
+    "claudeCode.useCtrlEnterToSend": "启用后，使用 Ctrl/Cmd+Enter 发送提示，而非仅按 Enter。这样 Enter 键可以换行。",
+    "claudeCode.preferredLocation": "Claude 默认打开位置。此设置会在您在新位置打开 Claude 时自动更新。",
+    "claudeCode.hideOnboarding": "隐藏 Claude Code 中的新手引导清单。",
+    "claudeCode.usePythonEnvironment": "运行 Claude 时自动激活工作区的 Python 环境。需要 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 扩展。"
+  },
+  "enumDescriptions": {
+    "claudeCode.preferredLocation": ["侧边栏（右侧）", "面板（新标签页）"]
+  }
+}

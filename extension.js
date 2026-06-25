@@ -153,6 +153,22 @@ async function applyTranslation(locator, translator, backup, config, silent = fa
         // 写入文件
         fs.writeFileSync(mainFilePath, content, 'utf8');
 
+        // 翻译 package.json 中的设置面板文本
+        const packageJsonPath = locator.findPackageJson(claudePath);
+        if (packageJsonPath) {
+            const hasPkgBackup = backup.hasBackup(packageJsonPath);
+            if (forceReapply && hasPkgBackup) {
+                await backup.restoreBackup(packageJsonPath);
+            }
+            if (config.get('createBackup') && !hasPkgBackup) {
+                await backup.createBackup(packageJsonPath);
+            }
+            let pkgContent = fs.readFileSync(packageJsonPath, 'utf8');
+            pkgContent = await translator.translatePackageJson(pkgContent);
+            fs.writeFileSync(packageJsonPath, pkgContent, 'utf8');
+            console.log('package.json 汉化完成');
+        }
+
         // 通知用户
         if (config.get('showNotifications') && !silent) {
             const choice = await vscode.window.showInformationMessage(
@@ -201,6 +217,13 @@ async function restoreOriginal(locator, backup, config) {
                 '备份文件不存在，无法还原'
             );
             return;
+        }
+
+        // 还原 package.json 备份
+        const packageJsonPath = locator.findPackageJson(claudePath);
+        if (packageJsonPath && backup.hasBackup(packageJsonPath)) {
+            await backup.restoreBackup(packageJsonPath);
+            console.log('package.json 已还原');
         }
 
         // 通知用户
