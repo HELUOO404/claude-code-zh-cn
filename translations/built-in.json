@@ -1512,6 +1512,14 @@
     {
       "original": "\"Welcome to Claude Code\"",
       "chinese": "\"欢迎使用 Claude Code\""
+    },
+    {
+      "original": "\"Switch models when a message is flagged\"",
+      "chinese": "\"当消息被标记时切换模型\""
+    },
+    {
+      "original": "\"This model's safeguards flagged this message. This sometimes happens with safe, normal conversations.\"",
+      "chinese": "\"此模型的安全防护标记了此消息。这种情况有时会发生在安全的正常对话中。\""
     }
   ]
 }
