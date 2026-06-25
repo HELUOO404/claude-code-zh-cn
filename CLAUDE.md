@@ -30,15 +30,17 @@ pnpm run build
 
 ### 核心模块
 
-- [lib/locator.js](lib/locator.js) - 扩展定位器，查找 Claude Code 的 `webview/index.js` 文件
-- [lib/translator.js](lib/translator.js) - 翻译引擎，实现三阶段汉化（前置→内置→后置）
+- [lib/locator.js](lib/locator.js) - 扩展定位器，查找 Claude Code 的 `webview/index.js` 和 `package.json`
+- [lib/translator.js](lib/translator.js) - 翻译引擎，实现三阶段汉化（前置→内置→后置）+ 设置面板翻译
 - [lib/backup.js](lib/backup.js) - 备份管理器，创建和还原 `.bak` 备份
 - [lib/config.js](lib/config.js) - 配置管理器，读取用户自定义规则
-- [translations/built-in.json](translations/built-in.json) - 内置翻译规则（376 条）
+- [translations/built-in.json](translations/built-in.json) - 内置 webview 翻译规则
+- [translations/settings.json](translations/settings.json) - 设置面板翻译规则
 
 **重要说明**：
 - Claude Code 的界面文本位于 `webview/index.js` 而非 `extension.js`
-- 扩展会自动查找 `webview/index.js` 文件并应用汉化
+- 设置面板文本位于 Claude Code 扩展的 `package.json` 的 `contributes.configuration.properties` 中
+- 扩展自动查找并汉化 `webview/index.js` 和 `package.json`
 - 支持用户通过配置添加前置和后置翻译规则
 
 ### 使用场景
@@ -63,7 +65,8 @@ pnpm run build
 | [extension.js](extension.js) | VS Code 扩展入口 |
 | [package.json](package.json) | 项目配置和依赖定义 |
 | [lib/](lib/) | 核心模块（locator、translator、backup、config） |
-| [translations/built-in.json](translations/built-in.json) | 内置翻译规则 |
+| [translations/built-in.json](translations/built-in.json) | 内置 webview 翻译规则 |
+| [translations/settings.json](translations/settings.json) | 设置面板翻译规则 |
 | [README.md](README.md) | 项目说明 |
 | [CHANGELOG.md](CHANGELOG.md) | 版本更新日志 |
 
@@ -84,6 +87,33 @@ pnpm run build
 - 支持正则表达式：设置 `"regex": true` 和 `"flags": "g"`
 - 更新前运行 `pnpm run lint` 检查代码质量
 - 打包扩展前确保测试通过：`pnpm run test`
+
+### 设置面板翻译规范（重要！踩坑记录）
+
+设置面板的翻译目标是 Claude Code 扩展的 `package.json` 中的 `contributes.configuration.properties`。
+
+**⚠️ 严禁操作**：
+1. **不要删除 `description` 字段** — VS Code Settings UI 要求保留 `description`，删除后整个设置项会消失
+2. **不要用 `description` → `markdownDescription` 转换** — 会导致设置项渲染异常（黑块、布局错乱）
+3. **不要在描述中用 `\n` 换行** — VS Code 设置面板不渲染 JSON 中的 `\n` 为换行
+4. **不要设置 `title` 字段** — VS Code 对单个设置不支持 `title`，设置名从 key 自动生成（如 `initialPermissionMode` → "Initial Permission Mode"），无法覆盖
+
+**✅ 正确操作**：
+- **只替换现有字段的值**，不新增、不删除字段
+- 标题翻译格式：`中文标题：描述文本`（冒号连接，放在 description 里）
+- 枚举下拉选项：用 `enumItemLabels`（VS Code 1.83+）翻译显示标签
+- 枚举项描述：用 `enumDescriptions` 翻译
+- `usePythonEnvironment` 用的是 `markdownDescription`（含链接），翻译时保持 markdown 格式
+
+**translator.js 翻译逻辑**：
+```
+for each property:
+  if settings.descriptions[key] exists:
+    if prop.description exists → replace prop.description (不删除!)
+    if prop.markdownDescription exists → replace prop.markdownDescription (不删除!)
+  if settings.enumItemLabels[key] exists → set prop.enumItemLabels
+  if settings.enumDescriptions[key] exists → set prop.enumDescriptions
+```
 
 ## 未来改进方向
 
