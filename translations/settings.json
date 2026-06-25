@@ -1,33 +1,36 @@
 {
   "version": "1.0.0",
   "description": "Claude Code 设置面板汉化规则（用于 package.json）",
-  "titles": {
-    "claudeCode.environmentVariables": "环境变量",
-    "claudeCode.useTerminal": "使用终端",
-    "claudeCode.allowDangerouslySkipPermissions": "允许危险跳过权限",
-    "claudeCode.claudeProcessWrapper": "Claude 进程包装器",
-    "claudeCode.respectGitIgnore": "遵循 Git 忽略规则",
-    "claudeCode.initialPermissionMode": "初始权限模式",
-    "claudeCode.disableLoginPrompt": "禁用登录提示",
-    "claudeCode.autosave": "自动保存",
-    "claudeCode.useCtrlEnterToSend": "使用 Ctrl+Enter 发送",
-    "claudeCode.preferredLocation": "首选位置",
-    "claudeCode.enableNewConversationShortcut": "新建对话快捷键",
-    "claudeCode.enableReopenClosedSessionShortcut": "重新打开已关闭会话快捷键",
-    "claudeCode.hideOnboarding": "隐藏新手引导",
-    "claudeCode.usePythonEnvironment": "使用 Python 环境"
-  },
   "descriptions": {
-    "claudeCode.useTerminal": "在终端而非原生 UI 中启动 Claude。",
-    "claudeCode.allowDangerouslySkipPermissions": "允许绕过权限模式。仅建议在无网络访问的沙盒环境中使用。",
-    "claudeCode.respectGitIgnore": "执行文件搜索时遵循 .gitignore 文件。提示：禁用此选项后，仍可通过 .ignore 中的其他排除模式进行过滤。",
-    "claudeCode.initialPermissionMode": "新对话的初始权限模式。",
-    "claudeCode.useCtrlEnterToSend": "启用后，使用 Ctrl/Cmd+Enter 发送提示，而非仅按 Enter。这样 Enter 键可以换行。",
-    "claudeCode.preferredLocation": "Claude 默认打开位置。此设置会在您在新位置打开 Claude 时自动更新。",
-    "claudeCode.hideOnboarding": "隐藏 Claude Code 中的新手引导清单。",
-    "claudeCode.usePythonEnvironment": "运行 Claude 时自动激活工作区的 Python 环境。需要 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 扩展。"
+    "claudeCode.environmentVariables": "**环境变量**\n启动 Claude 时设置的环境变量。\n\n建议在 Claude 的 settings.json 中设置环境变量。\n详见文档：https://code.claude.com/docs/en/settings",
+    "claudeCode.useTerminal": "**使用终端**\n在终端而非原生 UI 中启动 Claude。",
+    "claudeCode.allowDangerouslySkipPermissions": "**允许危险跳过权限**\n允许绕过权限模式。仅建议在无网络访问的沙盒环境中使用。",
+    "claudeCode.claudeProcessWrapper": "**Claude 进程包装器**\n用于启动 Claude 进程的可执行文件路径。",
+    "claudeCode.respectGitIgnore": "**遵循 Git 忽略规则**\n执行文件搜索时遵循 .gitignore 文件。提示：禁用此选项后，仍可通过 .ignore 中的其他排除模式进行过滤。",
+    "claudeCode.initialPermissionMode": "**初始权限模式**\n新对话的初始权限模式。",
+    "claudeCode.disableLoginPrompt": "**禁用登录提示**\n设为 true 时，扩展内不再提示登录/认证。适用于外部处理认证的场景。",
+    "claudeCode.autosave": "**自动保存**\nClaude 在读写文件前自动保存。",
+    "claudeCode.useCtrlEnterToSend": "**使用 Ctrl+Enter 发送**\n启用后，使用 Ctrl/Cmd+Enter 发送提示，而非仅按 Enter。这样 Enter 键可以换行。",
+    "claudeCode.preferredLocation": "**首选位置**\nClaude 默认打开位置。此设置会在您在新位置打开 Claude 时自动更新。",
+    "claudeCode.enableNewConversationShortcut": "**新建对话快捷键**\n使用 Cmd/Ctrl+N 快捷键在 Claude 获得焦点时开启新对话。",
+    "claudeCode.enableReopenClosedSessionShortcut": "**重新打开已关闭会话快捷键**\n使用 Cmd/Ctrl+Shift+T 重新打开最近关闭的 Claude 会话标签页。仅在最后关闭的是 Claude 标签页时拦截该快捷键；否则回退到 VS Code 的正常\"重新打开已关闭编辑器\"行为。",
+    "claudeCode.hideOnboarding": "**隐藏新手引导**\n隐藏 Claude Code 中的新手引导清单。",
+    "claudeCode.usePythonEnvironment": "**使用 Python 环境**\n运行 Claude 时自动激活工作区的 Python 环境。需要 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 扩展。"
+  },
+  "enumItemLabels": {
+    "claudeCode.initialPermissionMode": {
+      "default": "默认",
+      "acceptEdits": "自动接受编辑",
+      "plan": "计划模式",
+      "bypassPermissions": "绕过权限"
+    },
+    "claudeCode.preferredLocation": {
+      "sidebar": "侧边栏（右侧）",
+      "panel": "面板（新标签页）"
+    }
   },
   "enumDescriptions": {
+    "claudeCode.initialPermissionMode": ["使用默认权限模式", "自动接受文件编辑", "在编辑前先制定计划", "跳过所有权限确认"],
     "claudeCode.preferredLocation": ["侧边栏（右侧）", "面板（新标签页）"]
   }
 }
