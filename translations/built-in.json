@@ -1520,6 +1520,10 @@
     {
       "original": "\"This model's safeguards flagged this message. This sometimes happens with safe, normal conversations.\"",
       "chinese": "\"此模型的安全防护标记了此消息。这种情况有时会发生在安全的正常对话中。\""
+    },
+    {
+      "original": "\"When safety measures flag a message, automatically switch to a different model to keep chatting. When off, your session will pause instead.\"",
+      "chinese": "\"当安全措施标记某条消息时，自动切换到其他模型以继续对话。关闭此选项后，会话将暂停。\""
     }
   ]
 }
