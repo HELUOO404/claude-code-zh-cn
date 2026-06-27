@@ -1,9 +1,19 @@
 const vscode = require('vscode');
 const fs = require('fs');
+const path = require('path');
 const Locator = require('./lib/locator');
 const Translator = require('./lib/translator');
 const BackupManager = require('./lib/backup');
 const ConfigManager = require('./lib/config');
+
+/**
+ * 原子写入：先写临时文件再 rename，防止中途失败导致文件损坏
+ */
+function atomicWriteSync(filePath, content) {
+    const tmpPath = filePath + '.tmp';
+    fs.writeFileSync(tmpPath, content, 'utf8');
+    fs.renameSync(tmpPath, filePath);
+}
 
 /**
  * 扩展激活时调用
@@ -150,8 +160,8 @@ async function applyTranslation(locator, translator, backup, config, silent = fa
         // 应用三阶段汉化
         content = await translator.translate(content);
 
-        // 写入文件
-        fs.writeFileSync(mainFilePath, content, 'utf8');
+        // 写入文件（原子写入：临时文件 + rename，防止中途失败导致文件损坏）
+        atomicWriteSync(mainFilePath, content);
 
         // 翻译 package.json 中的设置面板文本
         const packageJsonPath = locator.findPackageJson(claudePath);
@@ -165,7 +175,7 @@ async function applyTranslation(locator, translator, backup, config, silent = fa
             }
             let pkgContent = fs.readFileSync(packageJsonPath, 'utf8');
             pkgContent = await translator.translatePackageJson(pkgContent);
-            fs.writeFileSync(packageJsonPath, pkgContent, 'utf8');
+            atomicWriteSync(packageJsonPath, pkgContent);
             console.log('package.json 汉化完成');
         }
 

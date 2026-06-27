@@ -39,7 +39,8 @@ function assert(condition, testName) {
 }
 
 function isInIpcContext(content, ruleOriginal) {
-    return translator.isInIpcContext(content, ruleOriginal);
+    const ipcValues = translator.extractIpcValues(content);
+    return translator.isInIpcValues(ipcValues, ruleOriginal);
 }
 
 console.log('=== IPC 协议保护测试 ===\n');
