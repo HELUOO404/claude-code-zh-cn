@@ -1655,15 +1655,15 @@
     },
     {
       "original": "\"Create Worktree Session\"",
-      "chinese": "\"创建工作树会话\""
+      "chinese": "\"创建工作树（Worktree）会话\""
     },
     {
       "original": "\"Worktree Name\"",
-      "chinese": "\"工作树名称\""
+      "chinese": "\"工作树（Worktree）名称\""
     },
     {
       "original": "\"New worktree name\"",
-      "chinese": "\"新工作树名称\""
+      "chinese": "\"新工作树（Worktree）名称\""
     },
     {
       "original": "\"Name is required\"",
@@ -1671,23 +1671,23 @@
     },
     {
       "original": "\"A new Git worktree will be created in a sibling directory\"",
-      "chinese": "\"将在同级目录中创建新的 Git 工作树\""
+      "chinese": "\"将在同级目录中创建新的 Git 工作树（Worktree）\""
     },
     {
       "original": "\"Open worktree\"",
-      "chinese": "\"打开工作树\""
+      "chinese": "\"打开工作树（Worktree）\""
     },
     {
       "original": "\"Enter worktree name\"",
-      "chinese": "\"输入工作树名称\""
+      "chinese": "\"输入工作树（Worktree）名称\""
     },
     {
       "original": "\"This session is in worktree\"",
-      "chinese": "\"此会话位于工作树中\""
+      "chinese": "\"此会话位于工作树（Worktree）中\""
     },
     {
       "original": "\"Failed to create worktree\"",
-      "chinese": "\"创建工作树失败\""
+      "chinese": "\"创建工作树（Worktree）失败\""
     },
     {
       "original": "\"Create\"",
@@ -1695,27 +1695,27 @@
     },
     {
       "original": "\"Creating worktree…\"",
-      "chinese": "\"正在创建工作树…\""
+      "chinese": "\"正在创建工作树（Worktree）…\""
     },
     {
       "original": "\"Switch branch & continue\"",
-      "chinese": "\"切换分支并继续\""
+      "chinese": "\"切换分支（Branch）并继续\""
     },
     {
       "original": "\"Continue without switching branch\"",
-      "chinese": "\"不切换分支继续\""
+      "chinese": "\"不切换分支（Branch）继续\""
     },
     {
       "original": "\"Branch switch failed\"",
-      "chinese": "\"切换分支失败\""
+      "chinese": "\"分支（Branch）切换失败\""
     },
     {
       "original": "\"Can’t switch branches\"",
-      "chinese": "\"无法切换分支\""
+      "chinese": "\"无法切换分支（Branch）\""
     },
     {
       "original": "\"This session was started on a different branch. Switch to continue with the original context.\"",
-      "chinese": "\"此会话在不同的分支上启动。切换分支以继续使用原始上下文。\""
+      "chinese": "\"此会话在不同的分支（Branch）上启动。切换以继续使用原始上下文。\""
     },
     {
       "original": "\"Checking working directory\"",
